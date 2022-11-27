@@ -1,0 +1,19 @@
+# This is a pseudo code file for Merge Robotics
+
+# This is task C3 - > Install FRC's Software Components including VSCode and other FRC tools
+
+# First provides tools for us to work on our robot code.  VSCode was recently
+# introduced to the FRC environment.  This is complicated but it happens every
+# year, so here we go!
+
+# There is an introduction provided here
+#    -> https://docs.wpilib.org/en/stable/docs/getting-started/getting-started-frc-control-system/control-system-software.html
+
+# And the generic link for downloads is found here
+#    -> https://github.com/wpilibsuite/allwpilib/releases
+
+# Given where we are sitting in November 2022, we will use the "WPILib 2023.1.1 Release"
+# Please download this file, and install for your system...
+#    -> hhttps://github.com/wpilibsuite/allwpilib/releases/tag/v2023.1.1-beta-4
+
+# Note we believe it is best to have both Python and OpenCV installed and working beforehand.

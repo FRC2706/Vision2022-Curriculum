@@ -1,0 +1,29 @@
+# This is a pseudo code file for Merge Robotics
+
+# This is task D4 - > Loop through Mask Display Images
+
+# Last task introduced loops, for this task lets store a bunch of images in an array and loop through them all with keyboard control
+
+# Recommended starting points -> https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html
+
+# To help we have comments to prompt how to do this is below
+
+# Imports!
+# Python - import modules of code as required (OpenCV here)
+
+# define a string variable for the path to the file
+
+# define and fill an array with the names of images 
+
+# setup loop
+
+# load a color image using the string and array
+
+# mask the image to only show yellow or green images
+
+# display the colour mask image to screen
+
+# wait for user input to move or close
+
+# cleanup and exit
+

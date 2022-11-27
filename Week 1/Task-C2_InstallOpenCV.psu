@@ -1,0 +1,10 @@
+# This is a pseudo code file for Merge Robotics
+
+# This is task C2 - > Install OpenCV for Python
+
+# Installing OpenCV seems one of the more complicated things you will need to do.  We may have a zoom call, if needed, to provide help with the setup of OpenCV.
+
+# There is guidance provided here
+#    -> https://docs.opencv.org/master/da/df6/tutorial_py_table_of_contents_setup.html
+
+# For Window10 users we are going to try using a package manger called chocolatey, details in our zoom call
