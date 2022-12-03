@@ -1,0 +1,16 @@
+# This is a pseudo code file for Merge Robotics
+
+# This is task I2 - > Webcam Processing and Speed.  A camera has dedicated processing on built-in
+# chips of its circuit board that may take little or lots of time before sending the image down the
+# wire to the Raspberry Pi or computer during development.  Merge has traditionally used HD-3000
+# webcams the last few years for retro reflective tape targets.  We are experimenting with an ELP 
+# wide angle camera for the driver camera.
+# 
+# One of the big challenges we have every year is commonly called lag, which is basically a time
+# difference between the real action and the presentation of that action on the driver station.
+# To date, our only serious effort to reduce lag has been to reduce the resolution.  This Task is
+# really just a place holder for any research that can be found about this lag or delay when using
+# different webcams.
+#
+# please paste links to any information that you find of interest for present or future testing.
+

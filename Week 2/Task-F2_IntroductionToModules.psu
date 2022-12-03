@@ -1,0 +1,70 @@
+# This is a pseudo code file for Merge Robotics
+
+# This is task F2 - > Introduction to Modules
+
+# In task F we found an intersting techinique on the Knoxville github page including a function called 'hsvThreshold'
+
+# You can find their full file here with 'hsvThreshold' embedded as part of it.   
+# - https://github.com/Knoxville-FRC-alliance/Vision-2018-Python/blob/master/visionPi.py
+
+# As an experiment let's try this method out by copying task D5 and modifying it to work with their function.
+# I understand that the proper Python terms for a function in a separate file is called a modules, so we will
+# also use a new folder called modules, a .py file called 'masking.py' as a chooser of sorts, with a sub folder
+# for code breakdown called maskers
+
+# Imports!
+# Python - import modules of code as required (OpenCV here)
+
+# Constants!
+# colors for screen information
+
+
+# colors for HSV filtering
+
+
+# fonts for displaying text
+
+
+# define a string variable for the path to the file
+
+
+# define and fill an array with the names of images 
+
+
+# setup loop
+
+    # load a color image using the string and array
+
+
+    # mask the image to only show yellow or green images
+   
+
+    # define a range of from upper to lower in HSV
+   
+
+    # threshold the HSV image to get only green color
+
+
+    # create a full color mask
+    # Bitwise-AND binary mask and original image
+
+
+    # generate the array of Contours
+ 
+
+    # sort the array of Contours by area
+
+
+    # draw circle at centroid of target on colour mask, and known distance to target as text
+
+
+    # indicare the height of the found target, assumed to be largest contour
+
+
+    # display the colour mask image to screen
+
+
+    # wait for user input to move or close
+
+
+# cleanup and exit
