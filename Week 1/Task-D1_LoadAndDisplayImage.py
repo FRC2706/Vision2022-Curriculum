@@ -15,7 +15,7 @@ import numpy as np
 import cv2
 
 # define a string variable for the path to the file
-strPathName = 'Week 1/'
+strPathName = 'Images/'
 strImageFilename = '2016-stonghold-high-tower-goal.png'
 
 # load a color image using string

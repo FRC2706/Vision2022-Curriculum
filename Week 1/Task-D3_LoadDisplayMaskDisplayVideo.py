@@ -34,6 +34,7 @@ elif intCameraNumber == 0:
 # CAP_DSHOW tells OpenCV / Windows to use the DirectShow API
 # 0 is my laptop camera, 1 is first usb webcam found
 cap = cv2.VideoCapture(intCameraNumber + cv2.CAP_DSHOW)
+#print("CAP_DSHOW = ",cv2.CAP_DSHOW)
 
 if intCameraNumber == 1:
     pass

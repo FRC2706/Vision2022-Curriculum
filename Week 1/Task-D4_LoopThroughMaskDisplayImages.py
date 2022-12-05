@@ -77,14 +77,17 @@ while not(flgExit):
     # wait for user input to move or close
     while(True):
         ke = cv2.waitKeyEx(0)
+        # 27 --> ESC, 113 --> q
         if ke == 113 or ke == 27:
             flgExit = True
             break
+        # 105 --> i, 
         if ke == 105 or ke == 2490368:
             intCounter = intCounter - 1
             if intCounter < 0: 
                 intCounter = len(arrImageFiles) - 1
             break
+        # 109 --> m, 2621440 --> downKey
         if ke == 109 or ke == 2621440:
             intCounter = intCounter + 1
             if intCounter > len(arrImageFiles) - 1:
