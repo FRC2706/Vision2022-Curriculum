@@ -1,0 +1,9 @@
+# This is a pseudo code file for Merge Robotics
+
+# This is task K - > Blank regions of no interest.  We have discussed the notion
+# that there are areas of the image that will never contain information that we want
+# our code to process.  Using online search engines find a way using OpenCV to
+# modify a photo to contain black pixels in areas with no interest to our code
+
+# Previous tasks can be copied here and modified, this should be a quick effort
+

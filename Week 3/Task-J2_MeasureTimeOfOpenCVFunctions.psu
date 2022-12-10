@@ -1,0 +1,33 @@
+# This is a pseudo code file for Merge Robotics
+
+# This is task J2 - > Measure Time of OpenCV Functions.  This is a series of tasks we are going to 
+# learn how to create our own function, and test the speed of different ways of writing the
+# function.  The reason for this is actually to simultaneously make our code easier to read
+# and perform better.  Both re-usability and speed make the code powerful for future use as well.
+
+# Task J2 will introduce a comparison of the two maskers we have looked at in the modules folder.
+
+# imports
+
+# constants
+
+# create empty bgr image for the test
+
+# draw a green rectangle on the test image
+
+# display the test image to verify it visually
+
+# convert image to hsv from bgr
+
+# using 'ir' from opencv time how long it takes to make 1,000 masks
+
+# using 'kn' from the Knoxville X time how long it takes to make 1,000 masks
+
+# write the average time to the images
+
+# display the two masks to verify it visually
+
+# wait for user input to close
+
+# cleanup and exit
+

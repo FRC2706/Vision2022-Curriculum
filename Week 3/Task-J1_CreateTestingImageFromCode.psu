@@ -1,0 +1,29 @@
+# This is a pseudo code file for Merge Robotics
+
+# This is task J1 - > Create Testing Image from Code. This is a series of tasks we are going to 
+# learn how to create our own function, and test the speed of different ways of writing the
+# function.  The reason for this is actually to simultaneously make our code easier to read
+# and perform better.  Both re-usability and speed make the code powerful for future use as well.
+
+# Task J1 is simply creation of the image itself with code, no camera, no robot, just code!
+
+# imports
+
+# constants
+
+# create empty bgr image for the test
+
+# draw a green rectangle on the test image
+
+# display the test image to verify it visually
+
+# convert image to hsv from bgr
+
+# using inrange from opencv make mask
+
+# display the mask to verify it visually
+
+# wait for user input to close
+
+# cleanup and exit
+

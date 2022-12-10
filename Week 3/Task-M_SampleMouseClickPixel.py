@@ -1,0 +1,11 @@
+# This is a pseudo code file for Merge Robotics
+
+# This is task M - > Sample Mouse Clicks by Pixel. 
+
+# We are going to continue towards our objective of a tool for season kickoff
+# This pseudo file will allow us to determine a pixel color by clicking
+# on it.  The purpose is to help calibration of the color filter.
+# Using web searches for python and pixel color with a mouse, create your own
+# code to deliver this capacity.
+
+# https://docs.opencv.org/4.5.0/db/d5b/tutorial_py_mouse_handling.html
