@@ -1,0 +1,7 @@
+# This is a pseudo code file for Merge Robotics
+
+# This is task O - > Argument passing and Folder management. 
+
+# We are going to continue towards our objective of a tool for season kickoff
+# This pseudo file will allow us to pass instructions to our code from the
+# command line about what folders to use and eventually other desired options.

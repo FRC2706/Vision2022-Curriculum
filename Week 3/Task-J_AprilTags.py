@@ -1,8 +1,15 @@
 # Credit to this tutorial for the apriltag code: https://pyimagesearch.com/2020/11/02/apriltag-with-python/
 # Credit to this random file I found on github for the solvePnp with SOLVEPNP_IPPE_SQUARE: https://github.com/AeroTec-UAV-ART/UAV-ART/blob/b02e19ce9d569c3efb9297bd0d8fe31f54d381cd/vision/Fiduciary_Markers/Old_Code/Old_Markers_Code/markerC_new_measure.py
 
+# To install on Mac or PC
+# 'pip3 install pupil-apriltags'
 
-import apriltag
+# To install on Linux or Raspberry pi, this should work
+# 'pip3 install apriltags'
+# Must uncomment the apriltag and line 47 and 48, then comment line 12 and 50-58 to work with apriltags
+
+#import apriltag
+from pupil_apriltags import Detector
 import cv2
 import numpy as np
 from math import degrees
@@ -37,8 +44,18 @@ camera_matrix = np.array(
 					)
 # camera_matrix = np.array([[343.8444021316304, 0.0, 150.06626518215066], [0.0, 344.53827467342745, 105.60299945602793], [0.0, 0.0, 1.0]])
 # setup apriltag detector
-options = apriltag.DetectorOptions(families="tag36h11")
-detector = apriltag.Detector(options)
+#options = apriltag.DetectorOptions(families="tag36h11")
+#detector = apriltag.Detector(options)
+
+detector = Detector(
+   families="tag36h11",
+   nthreads=1,
+   quad_decimate=1.0,
+   quad_sigma=0.0,
+   refine_edges=1,
+   decode_sharpening=0.25,
+   debug=0
+)
 
 while(True): 
     sucess, image = cap.read()

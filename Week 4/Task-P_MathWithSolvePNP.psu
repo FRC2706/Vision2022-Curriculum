@@ -1,0 +1,17 @@
+# This is a pseudo code file for Merge Robotics
+
+# This is task P - > Math with Solve PNP function
+
+# On the GIGMM trail we have used some simple math in the past, now let's look 
+# at some complex math, or a specific function from OpenCV called SolvePNP
+
+# to get there, lots of learning... but with sample code, here are some links
+
+# https://docs.opencv.org/4.5.0/d9/db7/tutorial_py_table_of_contents_calib3d.html
+# https://github.com/ligerbots/VisionServer/blob/master/utils/camera_calibration.py
+# https://markhedleyjones.com/storage/checkerboards/Checkerboard-A4-25mm-10x7.pdf
+# https://github.com/ligerbots/VisionServer/blob/master/data/calibration/chessboard_9x6.png
+
+
+
+

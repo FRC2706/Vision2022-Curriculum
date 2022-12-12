@@ -1,0 +1,8 @@
+# This is a pseudo code file for Merge Robotics, 2021, Game Changers
+
+# This is task O - > Sample Filter Contours. 
+
+# Over the weeks, we have explored ways to understand Contours visually and using
+# OpenCV functions.  Now lets put these to work and really get down to the 
+# challenge of finding FRC vision targets.  Basic idea is to loop through
+# sorted contours keeping desired contous only.
