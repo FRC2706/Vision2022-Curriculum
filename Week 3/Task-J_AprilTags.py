@@ -1,6 +1,9 @@
 # Credit to this tutorial for the apriltag code: https://pyimagesearch.com/2020/11/02/apriltag-with-python/
 # Credit to this random file I found on github for the solvePnp with SOLVEPNP_IPPE_SQUARE: https://github.com/AeroTec-UAV-ART/UAV-ART/blob/b02e19ce9d569c3efb9297bd0d8fe31f54d381cd/vision/Fiduciary_Markers/Old_Code/Old_Markers_Code/markerC_new_measure.py
 
+# Some good documentation here for a different python wrapper:
+# https://github.com/Kazuhito00/AprilTag-Detection-Python-Sample/blob/main/README_EN.md
+
 # To install on Mac or PC
 # 'pip3 install pupil-apriltags'
 
@@ -48,13 +51,12 @@ camera_matrix = np.array(
 #detector = apriltag.Detector(options)
 
 detector = Detector(
-   families="tag36h11",
+   families="tag16h5",
    nthreads=1,
    quad_decimate=1.0,
    quad_sigma=0.0,
    refine_edges=1,
-   decode_sharpening=0.25,
-   debug=0
+   decode_sharpening=0.5,
 )
 
 while(True): 
@@ -67,40 +69,41 @@ while(True):
     # loop over the AprilTag detection results
     for r in results:
         
-        (ptA, ptB, ptC, ptD) = r.corners
+        if (r.hamming == 0):
+           (ptA, ptB, ptC, ptD) = r.corners
         
-        # extract the bounding box (x, y)-coordinates for the AprilTag
-		# and convert each of the (x, y)-coordinate pairs to integers
-        ptB = (int(ptB[0]), int(ptB[1]))
-        ptC = (int(ptC[0]), int(ptC[1]))
-        ptD = (int(ptD[0]), int(ptD[1]))
-        ptA = (int(ptA[0]), int(ptA[1]))
+           # extract the bounding box (x, y)-coordinates for the AprilTag
+		   # and convert each of the (x, y)-coordinate pairs to integers
+           ptB = (int(ptB[0]), int(ptB[1]))
+           ptC = (int(ptC[0]), int(ptC[1]))
+           ptD = (int(ptD[0]), int(ptD[1]))
+           ptA = (int(ptA[0]), int(ptA[1]))
 
 		# draw the bounding box of the AprilTag detection
-        cv2.line(image, ptA, ptB, (0, 255, 0), 2)
-        cv2.line(image, ptB, ptC, (0, 255, 0), 2)
-        cv2.line(image, ptC, ptD, (0, 255, 0), 2)
-        cv2.line(image, ptD, ptA, (0, 255, 0), 2)
+           cv2.line(image, ptA, ptB, (0, 255, 0), 2)
+           cv2.line(image, ptB, ptC, (0, 255, 0), 2)
+           cv2.line(image, ptC, ptD, (0, 255, 0), 2)
+           cv2.line(image, ptD, ptA, (0, 255, 0), 2)
         
         # draw the center (x, y)-coordinates of the AprilTag
-        (cX, cY) = (int(r.center[0]), int(r.center[1]))
-        cv2.circle(image, (cX, cY), 5, (0, 0, 255), -1)
+           (cX, cY) = (int(r.center[0]), int(r.center[1]))
+           cv2.circle(image, (cX, cY), 5, (0, 0, 255), -1)
         
         # ERIK: Tag family should contain a string, "36h11" which is the family of the apriltag. 
 		# FIRST says we should only have 36h11 tags so might be a good check to see if the target is good.
      
-        tagFamily = r.tag_family.decode("utf-8")
+           tagFamily = r.tag_family.decode("utf-8")
 		
 		# Put the text for the id of the tag
-        cv2.putText(image, f"id: {r.tag_id}", (ptA[0], ptA[1] - 15),
-		cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+           cv2.putText(image, f"id: {r.tag_id}", (ptA[0], ptA[1] - 15),
+		   cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 		
 		# Get the corners of the target in a numpy array for solvePnP
-        corners = np.array(r.corners)
+           corners = np.array(r.corners)
 
-        pnpsucsess, rvec, tvec = cv2.solvePnP(object_points, corners, camera_matrix, camera_distortion, flags = cv2.SOLVEPNP_IPPE_SQUARE)
+           pnpsucsess, rvec, tvec = cv2.solvePnP(object_points, corners, camera_matrix, camera_distortion, flags = cv2.SOLVEPNP_IPPE_SQUARE)
 		
-        print(	f"tag id: {r.tag_id} \n"
+           print(	f"tag id: {r.tag_id} \n"
 			 	f"translation vector -> x:{float(tvec[0]):.3f}, y:{float(tvec[1]):.3f}, z:{float(tvec[2]):.3f} \n"
 			  	f"rotation vector    -> 1:{degrees(float(rvec[0])):.3f}, 2:{degrees(float(rvec[1])):.3f}, 3:{degrees(float(rvec[2])):.3f} \n"
 			#   f"{r}"
